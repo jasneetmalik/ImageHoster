@@ -43,8 +43,8 @@ public class ImageController {
     }
 
     //This method is called when the details of the specific image with corresponding title are to be displayed
-    //The logic is to get the image from the databse with corresponding title. After getting the image from the database the details are shown
-    //First receive the dynamic parameter in the incoming request URL in a string variable 'title' and also the Model type object
+    //The logic is to get the image from the database with corresponding title. After getting the image from the database the details are shown
+    //Receive parameter in the incoming request URL in a string variable 'title' and also the Model type object
     //Call the getImageByTitle() method in the business logic to fetch all the details of that image
     //Add the image in the Model type object with 'image' as the key
     //Return 'images/image.html' file
@@ -111,7 +111,7 @@ public class ImageController {
             model.addAttribute("tags", tags);
             return "images/edit";
         } else {
-            String error = "Only the owner of the image can delete the image";
+            String error = "Only the owner of the image can edit the image";
             model.addAttribute("editError", error);
             redirectAttributes.addAttribute("editError", error);
             redirectAttributes.addFlashAttribute("editError", error);
